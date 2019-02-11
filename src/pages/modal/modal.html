@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>modal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="data !== 1; else no">
+  <ion-list *ngFor="let item of country">
+    <button ion-item (click)="dimiss(item)">
+      {{item.name}}
+    </button>
+  </ion-list>
+</div>
+ <ng-template #no>
+   <button ion-item (click)="dimiss(item)">no data</button>
+ </ng-template>
+</ion-content>
